@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>品优购-综合网购首选-正品低价、品质保障、及时配送、轻松购物！</title>
+    <!-- <link rel="shortcut icon" href="favicon.ico"> -->
+    <!-- 公共css样式 -->
+    <!-- <link rel="stylesheet" href="css/common.css"> -->
+    <!-- css初始化样式 -->
+    <!-- <link rel="stylesheet" href="css/base.css"> -->
+    <style>
+        @font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?7kkyc2');
+    src:  url('../fonts/icomoon.eot?7kkyc2#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?7kkyc2') format('truetype'),
+    url('../fonts/icomoon.woff?7kkyc2') format('woff'),
+    url('../fonts/icomoon.svg?7kkyc2#icomoon') format('svg');
+    font-weight: normal;
+	font-style: normal;
+}
+*{
+    margin: 0;
+    padding:0;
+}
+/* 去掉倾斜线 */
+em,i{
+    font-style: normal;
+}
+li{
+    list-style: none;
+}
+/* 鼠标放上去变小手 */
+button{
+    cursor:pointer;
+}
+/* 去掉下划线 */
+a{
+    color:#666;
+    text-decoration: none;
+}
+/* 鼠标悬停变颜色 */
+a:hover{
+    color:#e33333;
+}
+/* 去掉蓝色框框 */
+input{
+    outline:none;
+}
+
+.icomoon{
+    font-family: 'icomoon';
+}
+.shortcut{
+    background: #f1f1f1;
+    height: 31px;
+    /* 垂直居中 */
+    line-height:31px;
+}
+.w{
+    width: 1200px;
+    margin:0 auto;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float:right;
+}
+.shortcut li{
+    float:left;
+    font-size: 12px;
+    margin-right:5px;
+}
+.style-red{
+    color:#c81623;
+}
+/* .fr ul li{
+    float:right;
+} */
+.shortcut .spacer{
+    width:1px;
+    height:12px;
+    background:#666;
+    /* 上 左右 下 */
+    margin:9px 12px 0;
+}
+/* 父盒子 */
+.header{
+    height: 105px;
+    position:relative;
+}
+.logo{
+position: absolute;
+top:25px;
+left:0;
+}
+/* a是行内标签得用block给他转换块元素 */
+.logo a{
+    display:block;
+    width: 175px;
+    height:56px;
+    background:url(../img/logo.png);
+}
+.search{
+   position:absolute;
+   top:25px;
+   left:348px;
+}
+.search input{
+    width: 445px;
+    height:32px;
+    color:#ccc;
+    border:2px solid #b1191a;
+    /* 内边距 */
+    padding-left:10px;
+}
+.search button{
+    width: 82px;
+    height:36px;
+    background-color: #b1191a;
+    border:0;
+    color:white;
+    margin: -5px;
+}
+.hotworks li{
+float:left;
+margin:0px 10px;
+}
+.hotworks{
+    position: absolute;
+    top:68px;
+    right:300px;
+}
+.car{
+    font-family: 'icomoon';
+    /* right:400px; */
+}
+.shopcar{
+    position: absolute;
+    top:25px;
+    right:64px;
+    width: 138px;
+    height: 34px;
+    border:#ccc;
+    background-color: #f7f7f7;
+    font-size: 12px;
+    /* 水平居中 跟高应该是一样的*/
+    line-height:34px;
+    /* 垂直居中 */
+    text-align: center;
+}
+.count{
+    position: absolute;
+    /* left:20px; */
+    line-height: 14px;
+    background-color: #e50012;
+    height:14px;
+    /* 给他撑开距离左右一个缝隙 */
+    margin:3px 0;
+    /* 字体颜色 */
+    color:white;
+    padding: 0 3px;
+    /* 上右下左 */
+    border-radius:7px 7px 7px 0;
+}
+/* <!-- 导航部分 --> */
+.nav{
+    height: 45px;
+    border-bottom: 2px solid #b1191a;
+}
+.shopdown{
+    font-size: 16px;
+    color:white;
+    background-color:#b1191a;
+    width:209px;
+    height:45px;
+    line-height:45px;
+    /* 字体居中 */
+    text-align: center;
+}
+.dd{
+    margin-top: 2px;
+    position:relative;
+    width:209px;
+    height: 466px;
+    background-color:#c81623;
+}
+.dd ul li{
+    height:31px;
+    /* background-color:#c81623; */
+    line-height:31px;
+    font-size: 14px;
+    /* width: 209px; */
+    text-align:left;
+    color:white;
+    margin-left:1px;
+    /* 上下0左右10距离两边的位置 */
+    padding:0 10px;
+}
+.dd ul li a{
+    color:white;
+}
+/* 让大于号像右靠边 */
+.dd ul li i{
+   float:right;
+}
+.dd ul li:hover a,.dd ul li:hover{
+background-color:white;
+color:#c81623;
+}
+.navitems{
+    font-size: 16px;
+    /* 距离旁边的距离为10px */
+    margin-left: 10px;
+}
+.navitems ul li{
+    float:left;
+    width:98px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+}
+.main{
+    height: 455px;
+    width: 980px;
+    margin-left:219px;
+    margin-top:10px;
+    /* background-color:red; */
+}
+.focus{
+    position:relative;
+    width:720px;
+    height:455px;
+    /* background-color:purple; */
+}
+.arrow-l,.arrow-r{
+    position: absolute;
+    width: 24px;
+    height:40px;
+    color:white;
+    background-color: rgba(0, 0,0, 0.5);
+    margin-top:-20px;
+    line-height:40px;
+    text-align: center;
+    top:50%;
+}
+/* 把重叠的右边挪过去 */
+.arrow-r{
+   right:0px;
+}
+.circle {
+    position:absolute;
+    bottom:10px;
+    left:50px;
+
+}
+.circle li{
+width: 8px;
+height:8px;
+/* rgb是颜色 */
+border:2px solid rgb(255,255,255);
+border-radius:50%;
+margin:0 3px;
+float: left;
+/* padding内边距撑开了 */
+/* margin 外边距之间的距离 */
+}
+.current{
+    background-color: #fff;
+}
+.newsflash{
+    width:250px;
+    height: 455px;
+     /* background-color: red; */
+}
+.news{
+    height: 163px;
+    border:1px solid #ccc;
+}
+.news-hd{
+    height:32px;
+    /* 下划线 */
+    border-bottom:1px solid #ccc;
+    color: #666;
+    line-height: 32px;
+    font-size: 14px;
+    /* 给个内边距让字体串右过去   上下左右 */
+    padding: 0 5px;
+}
+/* 这个是让字体直接串最右面 */
+.news-hd a{
+    float: right;
+}
+.news-bd li{
+    font-size:14px;
+    /* 距离左边篇右边一点 */
+    padding:0 10px;
+    /* 两个之间距离是5px */
+    margin-top:5px;
+}
+.lifeservice{
+    height: 208px;
+    /* 给它设置一个边框 */
+    border:1px solid #ccc;
+    /* 去掉两个重叠的上边框 */
+    border-top:none;
+    /*给超出的边框溢出隐藏 就使两个边框重叠了 */
+    overflow: hidden;
+    position: relative;
+}
+.lifeservice ul{
+    width: 252px;
+}
+.lifeservice li{
+    width: 62px;
+    height: 70px;
+    /* 右边框 */
+    border-right: 1px solid #ccc;
+    /* 给他一个下边框 */
+    border-bottom: 1px solid #ccc;
+    float: left;
+}
+.service_ico{
+width: 23px;
+height: 25px;
+/* i是行内元素转成块元素设置值 */
+display: block;
+background-image: url("../img/icons.png");
+/* 块元素居中 */
+margin: 8px auto;
+} 
+.service_ico_huafei{
+   background-position:-19px -16px ;
+} 
+.service_ico_feiji{
+    background-position:-81px -16px ;
+}
+.hot{
+    /* span是行转换成块元素 */
+    display: block;
+    width: 12px;
+    height: 15px;
+    background-image: url("../img/jian.jpg");
+    top:0px;
+    left: 113px;
+    /* 相对于父盒子定位不想对于他就相对于浏览器 */
+    position: absolute;
+}
+.lifeservice p{
+    text-align: center;
+}
+.bargain{
+    margin-top: 6px;
+}
+.recommend{
+    margin-top: 10px;
+    height: 162px;
+}
+.recom-hd{
+   width: 200px;
+   height: 162px;
+   background-color: #5c5251;
+   background-image: url("../img/clock.png") no-repeat ;
+
+}
+.recom-bd{
+width: 1000px;
+height: 163px;
+/* background-color: blue; */
+background-color: #ebebeb;
+}
+.recom-hd  img{
+margin:31px 0 0 71px;
+/* 让图片水平剧中 */
+text-align:center;
+}
+.recom-hd  h3{
+   text-align:center;
+   color: white;
+   /* 字体变细 */
+   font-weight: normal;
+}
+.recom-bd li{
+    float: left;
+    /* 块元素div像下‘ */
+   margin-top:8px;
+   /* 就是一条线 */
+   border-right: 1px solid #ccc;
+   /* padding-top: 10px; */
+}
+.recom-bd li.last{
+    border-right:none;
+}
+.footer{
+    padding-top:30px;
+    height: 385px;
+    background-color: #f5f5f5;;
+}
+.mod_service{
+    width: 100%;
+    height: 79px;
+    border-bottom:1px solid #ccc;
+}
+.mod_service li{
+float: left;
+width:240px;
+height:79px;
+}
+.mod_service_zheng{
+    display: block;
+    /* 图片的位置 */
+  background-position:-251px -3px ;
+  background-image: url("../img/icons.png");
+  width: 52px;
+  height: 52px;
+  float: left;
+}
+.mod_service div{
+    /* 上右下左 */
+    margin: 6px 0 0 12px;
+    float: left;
+}
+.mod_help{
+    height: 187px;
+    border-bottom: 1px solid #ccc;
+}
+.mod_help dl{
+    float: left;
+    width: 150px;
+    margin-top:20px;
+    margin-left:50px;
+}
+.mod_help dd{
+font-size:12px;
+/* 字体之间像下移 */
+margin-top:5px;
+}
+.mod_help .box .box_h4{  
+    font-weight: normal;
+    text-align: center;
+    font-size: 12px;
+    margin-right: 50px;
+}
+.mod_help .box .box2_h4{
+    font-weight: normal;
+    text-align: center;
+    font-size: 12px;
+    margin-right: 50px;
+}
+.mod_help .box img{
+    /* 上下 左右    三个值是上 左右 下 */
+    margin:5px 0;
+
+}
+.mod_copyright {
+    width: 1200px;
+    font-size: 12px;
+    color:#666;
+    text-align: center;
+}
+.mod_copyright p{
+    margin:20px 0 20px 0;
+
+}
+.fixedtool{
+   
+    width: 66px;
+    left: 50%;
+    background-color:#c81623;
+    color:#ccc;
+    margin-left: -676px;
+    position:fixed;
+    top:100px;
+}
+.fixedtool li{
+    height: 32px;
+    background:white;
+    font-size: 12px;
+    line-height: 32px;
+    text-align: center;
+    /* 边框的下划线 */
+    border-bottom:1px solid #ccc;
+    color:#666;
+}
+.fixedtool .current{
+    background: #c81623;
+    color: white;
+}
+.jiadian{
+    /* height: 392px;
+    background-color: blue; */
+    margin-top: 25px;
+}
+.box-hd{
+    height: 30px;
+    /* 底部红色的线 */
+    border-bottom:2px solid #c81623;
+}
+.box-bd{
+    height: 360px;
+}
+.floor .box-hd h3{
+    /* 字体颜色 */
+    color:red;
+}
+.floor .box-hd .spacer{
+    width:1px;
+    height:12px;
+    background:#666;
+    /* 上 左右 下 */
+    margin:10px 15px 0;
+
+}
+.floor .box-hd ul li{
+    float: left;
+    font-size: 12px;
+    margin-right:15px;
+    /* 相当于父盒子垂直居中 */
+    line-height: 30px;
+}
+.floor .box-bd li{
+    height: 360px;
+    float: left;
+}
+.w209{
+    width: 209px;
+    background-color: #f9f9f9;
+}
+.floor .box-bd .w209 li{
+    width: 86px;
+    height: 32px;
+    border-bottom: 1px solid #ccc;
+    line-height: 32px;
+    float:left;
+    font-size: 12px;
+    margin-left: 6px;
+    color: #666666;
+    text-align: center;
+ 
+}
+.tupian{
+    border-bottom: 1px solid #ccc;
+}
+.w219{
+    border-right: 1px solid #ccc;
+}
+.zuihoutupian{
+    border-bottom: 1px solid #ccc;
+}
+.w220{
+    border-right: 1px solid #ccc;
+}
+.w225{
+    border-right: 1px solid #ccc;
+}
+
+.shouji{
+    /* height: 392px;
+    background-color: blue; */
+    margin-top: 25px;
+}
+.box-hd{
+    height: 30px;
+    /* 底部红色的线 */
+    border-bottom:2px solid #c81623;
+}
+.box-bd{
+    height: 360px;
+}
+.floor .box-hd h3{
+    /* 字体颜色 */
+    color:red;
+}
+.floor .box-hd .spacer{
+    width:1px;
+    height:12px;
+    background:#666;
+    /* 上 左右 下 */
+    margin:10px 15px 0;
+
+}
+.floor .box-hd ul li{
+    float: left;
+    font-size: 12px;
+    margin-right:15px;
+    /* 相当于父盒子垂直居中 */
+    line-height: 30px;
+}
+.floor .box-bd li{
+    height: 360px;
+    float: left;
+}
+.w209{
+    width: 209px;
+    background-color: #f9f9f9;
+}
+.floor .box-bd .w209 li{
+    width: 86px;
+    height: 32px;
+    border-bottom: 1px solid #ccc;
+    line-height: 32px;
+    float:left;
+    font-size: 12px;
+    margin-left: 6px;
+    color: #666666;
+    text-align: center;
+ 
+}
+.tupian{
+    border-bottom: 1px solid #ccc;
+}
+.w219{
+    border-right: 1px solid #ccc;
+}
+.zuihoutupian{
+    border-bottom: 1px solid #ccc;
+}
+.w220{
+    border-right: 1px solid #ccc;
+}
+.w225{
+    border-right: 1px solid #ccc;
+}
+        </style>
+</head>
+
+<body>
+    <!-- 顶部导航start-->
+    <div class="shortcut">
+        <div class="w">
+            <div class="fl">
+                <ul>
+                    <li>品优购欢迎您！</li>
+                    <li><a href="#">请登录</a></li>
+                    <li><a href="#" class="style-red">免费注册</a></li>
+                </ul>
+            </div>
+            <div class="fr">
+                <!-- 能用外边距解决用外边距<浮动><定位> -->
+                <ul>
+                    <li>
+                        <a href="#">我的订单</a>
+                    </li>
+
+                    <li class="spacer"></li>
+                    <li>
+                        <a href="#">我的品优购</a>
+                        <i class="icomoon"></i>
+                    </li>
+                    <li class="spacer"></li>
+                    <li>
+                        <a href="#">品优购会员</a>
+                    </li>
+                    <li class="spacer"></li>
+                    <li>
+                        <a href="#">企业采购</a>
+                    </li>
+                    <li class="spacer"></li>
+                    <li>
+                        <a href="#">关注品优购</a>
+                        <i class="icomoon"></i>
+                    </li>
+                    <li class="spacer"></li>
+                    <li>
+                        <a href="#">客户服务</a>
+                        <i class="icomoon"></i>
+                    </li>
+                    <li class="spacer"></li>
+                    <li>
+                        <a href="#">网页导航</a>
+                        <i class="icomoon"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 顶部导航end结束 -->
+    <!-- head 部分 -->
+    <div class="header w">
+        <div class="logo">
+            <!-- a标签控制的图片 -->
+            <a href="#" title="品优购"></a>
+        </div>
+        <div class="search">
+            <input type="text" value="请搜索内容...">
+            <button>搜索</button>
+        </div>
+        <div class="hotworks">
+            <ul>
+                <li><a href="#" class="style-red">优惠购首发</a></li>
+                <li><a href="#">亿万优惠</a></li>
+                <li><a href="#">9.9元团购</a></li>
+                <li><a href="#">每满99减30</a></li>
+                <li><a href="#">办公用品</a></li>
+                <li><a href="#">电脑</a></li>
+                <li><a href="#">通信</a></li>
+            </ul>
+        </div>
+        <div class="shopcar">
+            <i class="car style-red"></i>
+            <i>我的购物车</i>
+            <i class="arrow">></i>
+            <i class="count">80</i>
+            <!--行内样式绝对定位变成行内块-->
+        </div>
+    </div>
+    <!-- head 部分 结束-->
+    <!-- 导航开始部分 -->
+    <div class="nav">
+        <div class="w">
+            <div class="shopdown fl">全部商品分类
+                <div class="dd">
+                    <ul>
+                        <li class="menu-item"><a href="#">家用电器</a><i>></i></li>
+                        <li class="menu-item"><a href="#">手机、数码、通讯</a><i>></i></li>
+                        <li class="menu-item"><a href="#">电脑、办公</a><i>></i></li>
+                        <li class="menu-item"><a href="#">家具、家具、厨具</a><i>></i></li>
+                        <li class="menu-item"><a href="#">男装、女装、童装、内衣</a><i>></i></li>
+                        <li class="menu-item"><a href="#">个护化妆、清洁用品、宠物</a><i>></i></li>
+                        <li class="menu-item"><a href="#">鞋靴、箱包、珠宝、奢侈品</a><i>></i></li>
+                        <li class="menu-item"><a href="#">运动户外、钟表</a><i>></i></li>
+                        <li class="menu-item"><a href="#">汽车、汽车用品</a><i>></i></li>
+                        <li class="menu-item"><a href="#">母婴、玩具乐器</a><i>></i></li>
+                        <li class="menu-item"><a href="#">食品、酒类、生鲜、特产</a><i>></i></li>
+                        <li class="menu-item"><a href="#">医疗保健</a><i>></i></li>
+                        <li class="menu-item"><a href="#">图书、音箱、电子书</a><i>></i></li>
+                        <li class="menu-item"><a href="#">彩票、旅行、充值、票务</a><i>></i></li>
+                        <li class="menu-item"><a href="#">理财、众筹、白条、保险</a><i>></i></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 右边导航 -->
+            <div class="navitems fl">
+                <ul>
+                    <li><a href="">服装城</a></li>
+                    <li><a href="">美妆馆</a></li>
+                    <li><a href="">传智超市</a></li>
+                    <li><a href="">全球购</a></li>
+                    <li><a href="">闪购</a></li>
+                    <li><a href="">团购</a></li>
+                    <li><a href="">拍卖</a></li>
+                    <li><a href="">有趣</a></li>
+                </ul>
+            </div>
+            <!-- 右边导航结束 -->
+        </div>
+    </div>
+    <!-- 导航结束 -->
+    <div class="w">
+        <div class="main">
+            <!-- 轮播图 位置-->
+            <div class="focus fl">
+                <img src="upload/focus.jpg" alt="">
+                <a href="#" class="arrow-l">
+                    <</a> <a href="#" class="arrow-r">>
+                </a>
+                <!-- 小圆扭给他起个名 -->
+                <ol class="circle">
+                    <li></li>
+                    <li class="current"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ol>
+            </div>
+            <!-- 右侧导航的 -->
+            <div class=" newsflash fr">
+                <div class="news">
+                    <div class="news-hd">
+                        品优购快报
+                        <a href="#">更多&nbsp></a>
+                    </div>
+                    <div class="news-bd">
+                        <li> <a href="#">【特惠】爆款耳机5折秒</a></li>
+                        <li><a href="#">【特惠】母亲节健康好礼低至五折</a></li>
+                        <li><a href="#">【特惠】爆款耳机5折秒</a></li>
+                        <li><a href="#">【特惠】9.9元洗100张照片</a></li>
+                        <li><a href="#">【特惠】长虹智能空调立升1000元</a></li>
+                    </div>
+                </div>
+                <div class="lifeservice">
+                    <ul>
+                        <li>
+
+                            <a href="#"> <i class="service_ico service_ico_huafei"></i>
+                                <p>花费</p>
+                            </a>
+                        </li>
+                        <li>
+
+                            <a href="#"> <i class="service_ico service_ico_feiji"></i>
+                                <p>飞机</p>
+                            </a>
+                            <span class="hot"></span>
+                        </li>
+                        <li>
+
+                            <a href="#"> <i class="service_ico service_ico_feiji"></i>
+                                <p>飞机</p>
+                            </a>
+                        </li>
+                        <li>
+
+                            <a href="#"><i class="service_ico service_ico_feiji"></i>
+                                <p>飞机</p>
+                            </a>
+                        </li>
+                        <li>
+
+                            <a href="#"><i class="service_ico service_ico_feiji"></i>
+                                <p>飞机</p>
+                            </a>
+                        </li>
+                        <li>
+
+                            <a href="#"><i class="service_ico service_ico_feiji"></i>
+                                <p>飞机</p>
+                            </a>
+                        </li>
+                        <li>
+                            <i class="service_ico service_ico_feiji"></i>
+                            <a href="#"><i class="service_ico service_ico_feiji"></i>
+                                <p>飞机</p>
+                            </a>
+                        </li>
+                        <li>
+
+                            <a href="#"><i class="service_ico service_ico_feiji"></i>
+                                <p>飞机</p>
+                            </a>
+                        </li>
+                        <li>
+
+                            <a href="#"> <i class="service_ico service_ico_huafei"></i>
+                                <p>飞机</p>
+                            </a>
+                        </li>
+                        <li>
+
+                            <a href="#">
+                                <i class="service_ico service_ico_feiji"></i>
+                                <p>飞机</p>
+                            </a>
+                        </li>
+                        <li>
+
+                            <a href="#"> <i class="service_ico service_ico_feiji"></i>
+                                <p>飞机</p>
+                            </a>
+                        </li>
+                        <li>
+
+                            <a href="#"> <i class="service_ico service_ico_feiji"></i>
+                                <p>飞机</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bargain">
+                    <img src="upload/bargain.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 推荐服务模块start -->
+    <div class="recommend w">
+        <div class="recom-hd fl">
+            <img src="img/clock.png" alt="">
+            <h3>今日推荐</h3>
+        </div>
+        <div class="recom-bd fr">
+            <ul>
+                <li>
+                    <img src="upload/pic.jpg" alt="">
+                </li>
+                <li>
+                    <img src="upload/pic.jpg" alt="">
+                </li>
+                <li>
+                    <img src="upload/pic.jpg" alt="">
+                </li>
+                <li class="last">
+
+                    <img src="upload/pic.jpg" alt="">
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <!-- 推荐服务模块end -->
+    <!-- floor楼层区star -->
+    <div class="floor">
+        <div class="jiadian w">
+            <div class="box-hd">
+                <h3 class="fl">家用电器</h3>
+                <ul class="fr">
+                    <li class="style-red">热门</li>
+                    <li class="spacer"></li>
+                    <li>大家电</li>
+                    <li class="spacer"></li>
+                    <li>生活电器</li>
+                    <li class="spacer"></li>
+                    <li>厨房电器</li>
+                    <li class="spacer"></li>
+                    <li>个护健康</li>
+                    <li class="spacer"></li>
+                    <li>应季电器</li>
+                    <li class="spacer"></li>
+                    <li>空气净水</li>
+                    <li class="spacer"></li>
+                    <li>新奇特</li>
+                    <li class="spacer"></li>
+                    <li>高端电器</li>
+                </ul>
+            </div>
+            <div class="box-bd">
+                <ul>
+                    <li class="w209">
+                        <ul>
+                            <li><a href="#">节能补贴</a></li>
+                            <li><a href="#">4k电视</a></li>
+                            <li><a href="#">空气净水器</li>
+                            <li><a href="#">IH电饭煲</a></li>
+                            <li><a href="#">滚筒洗衣机</a></li>
+                            <li><a href="#">电热热水器</a></li>
+                        </ul>
+                        <img src="upload/floor-1-1.png" alt="">
+                    </li>
+                    <li class="w329">
+                        <img src="upload/pic1.jpg" alt="">
+                    </li>
+                    <li class="w219">
+                        <div class="tupian">
+                            <!-- img是行内元素得让并列出来 -->
+                            <img src="upload/floor-1-2.png" alt="">
+                         
+                        </div>
+                        <div>
+                            <img src="upload/floor-1-3.png" alt="">
+                        </div>
+                    </li>
+                    <li class="w220">
+                        <!-- <div> -->
+                            <img src="upload/floor-1-4.png" alt="">
+                        <!-- </div> -->
+                    </li>
+                    <li class="w225">
+                        <div class="zuihoutupian">  
+                            <img src="upload/floor-1-5.png" alt="">
+                        </div>
+                        <div>
+                                <img src="upload/floor-1-6.png" alt="">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="shouji w">
+                <div class="box-hd">
+                        <h3 class="fl">手机通讯</h3>
+                        <ul class="fr">
+                            <li class="style-red">热门</li>
+                            <li class="spacer"></li>
+                            <li>大家电</li>
+                            <li class="spacer"></li>
+                            <li>生活电器</li>
+                            <li class="spacer"></li>
+                            <li>厨房电器</li>
+                            <li class="spacer"></li>
+                            <li>个护健康</li>
+                            <li class="spacer"></li>
+                            <li>应季电器</li>
+                            <li class="spacer"></li>
+                            <li>空气净水</li>
+                            <li class="spacer"></li>
+                            <li>新奇特</li>
+                            <li class="spacer"></li>
+                            <li>高端电器</li>
+                        </ul>
+                    </div>
+                    <div class="box-bd">
+                        <ul>
+                            <li class="w209">
+                                <ul>
+                                    <li><a href="#">节能补贴</a></li>
+                                    <li><a href="#">4k电视</a></li>
+                                    <li><a href="#">空气净水器</li>
+                                    <li><a href="#">IH电饭煲</a></li>
+                                    <li><a href="#">滚筒洗衣机</a></li>
+                                    <li><a href="#">电热热水器</a></li>
+                                </ul>
+                                <img src="upload/floor-1-1.png" alt="">
+                            </li>
+                            <li class="w329">
+                                <img src="upload/pic1.jpg" alt="">
+                            </li>
+                            <li class="w219">
+                                <div class="tupian">
+                                    <!-- img是行内元素得让并列出来 -->
+                                    <img src="upload/floor-1-2.png" alt="">
+                                 
+                                </div>
+                                <div>
+                                    <img src="upload/floor-1-3.png" alt="">
+                                </div>
+                            </li>
+                            <li class="w220">
+                                <!-- <div> -->
+                                    <img src="upload/floor-1-4.png" alt="">
+                                <!-- </div> -->
+                            </li>
+                            <li class="w225">
+                                <div class="zuihoutupian">  
+                                    <img src="upload/floor-1-5.png" alt="">
+                                </div>
+                                <div>
+                                        <img src="upload/floor-1-6.png" alt="">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <!-- floor楼层区end -->
+    <!-- 固定电梯导航开始 -->
+    <div class="fixedtool">
+        <ul>
+            <li class="current">家用电器</li>
+            <li>手机通讯</li>
+            <li>家用电器</li>
+            <li>家用电器</li>
+            <li>家用电器</li>
+            <li>家用电器</li>
+        </ul>
+    </div>
+    <!-- 固定电梯导航结束 -->
+    <!-- footer star -->
+    <div class="footer">
+        <div class="w">
+            <div class="mod_service">
+                <ul>
+                    <li>
+                        <i class="mod_service_zheng"></i>
+                        <div>
+                            <h5>正品保证</h5>
+                            <p>正品保证，提供发票</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="mod_service_zheng"></i>
+                        <div>
+                            <h5>正品保证</h5>
+                            <p>正品保证，提供发票</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="mod_service_zheng"></i>
+                        <div>
+                            <h5>正品保证</h5>
+                            <p>正品保证，提供发票</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="mod_service_zheng"></i>
+                        <div>
+                            <h5>正品保证</h5>
+                            <p>正品保证，提供发票</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="mod_service_zheng"></i>
+                        <div>
+                            <h5>正品保证</h5>
+                            <p>正品保证，提供发票</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="mod_help">
+                <dl>
+                    <dt>购物指南</dt>
+                    <dd><a href="#">购物流程</a></dd>
+                    <dd> <a href="#">会员介绍</a></dd>
+                    <dd><a href="#" 生活旅行</a> </dd> <dd><a href="#">常见问题</a></dd>
+                    <dd><a href="#">大家电</a></dd>
+                    <dd><a href="#">联系客服</a></dd>
+                </dl>
+                <dl>
+                    <dt>购物指南</dt>
+                    <dd><a href="#">购物流程</a></dd>
+                    <dd> <a href="#">会员介绍</a></dd>
+                    <dd><a href="#" 生活旅行</a> </dd> <dd><a href="#">常见问题</a></dd>
+                    <dd><a href="#">大家电</a></dd>
+                    <dd><a href="#">联系客服</a></dd>
+                </dl>
+                <dl>
+                    <dt>购物指南</dt>
+                    <dd><a href="#">购物流程</a></dd>
+                    <dd> <a href="#">会员介绍</a></dd>
+                    <dd><a href="#" 生活旅行</a> </dd> <dd><a href="#">常见问题</a></dd>
+                    <dd><a href="#">大家电</a></dd>
+                    <dd><a href="#">联系客服</a></dd>
+                </dl>
+                <dl>
+                    <dt>购物指南</dt>
+                    <dd><a href="#">购物流程</a></dd>
+                    <dd> <a href="#">会员介绍</a></dd>
+                    <dd><a href="#" 生活旅行</a> </dd> <dd><a href="#">常见问题</a></dd>
+                    <dd><a href="#">大家电</a></dd>
+                    <dd><a href="#">联系客服</a></dd>
+                </dl>
+                <dl>
+                    <dt>购物指南</dt>
+                    <dd><a href="#">购物流程</a></dd>
+                    <dd> <a href="#">会员介绍</a></dd>
+                    <dd><a href="#" 生活旅行</a> </dd> <dd><a href="#">常见问题</a></dd>
+                    <dd><a href="#">大家电</a></dd>
+                    <dd><a href="#">联系客服</a></dd>
+                </dl>
+                <!-- <dl>
+                        <dt>购物指南</dt>
+                        <dd><a href="#">购物流程</a></dd>
+                        <dd> <a href="#">会员介绍</a></dd>
+                        <dd><a href="#" 生活旅行</a> </dd> <dd><a href="#">常见问题</a></dd>
+                        <dd><a href="#">大家电</a></dd>
+                        <dd><a href="#">联系客服</a></dd>
+                    </dl> -->
+                <dl class="box">
+                    <h4 class="box_h4">帮助中心</h4>
+                    <img src="upload/erweima.png" alt="">
+                    <h4 class="box2_h4">品优购客户端</h4>
+                </dl>
+            </div>
+            <div class="mod_copyright">
+                <p>关于我们 | 练习我们 | 练习客服 | 商家入驻| 营销中心 | 手机品预购|友情链接|销售联盟|品优购社区|品优购公益|English Site|Contact U</p>
+                <p>地址北京市昌平区建材城西路金燕龙办公楼一层 邮编:100096 电话:400-618-40000传真:010-82935100 邮箱:zhanghj+itcast.cn</p>
+                <p>京IPC备08001421号京公网安备1100108007702</p>
+            </div>
+        </div>
+    </div>
+    <!-- footer star -->
+</body>
+
+</html>
